@@ -1,8 +1,8 @@
 .cover {
     position: absolute;
-    width: 1200px;
-    height: 800px;
-    top: -1000px;
+    width: 1600px;
+    height: 1000px;
+    top: -1200px;
     img {
         width: 100%;
     }
@@ -90,6 +90,9 @@ section {
 
     &.gray {
         background-color: #f5f5f5;
+    }
+    &.schedule {
+        background-color: #f0f1f3;
     }
 
     &.jobs {
@@ -512,6 +515,7 @@ section {
                     color: #555;
                     margin: 0 0 2em;
                     font-size: 1.25em;
+                    width: 100%;
                     @include screen('tablet') {
                         font-size: 1em;
                     }
@@ -819,9 +823,12 @@ section {
                     }
 
                     img {
-                        width: 100%;
+                        width: 90%;
                         max-width: 380px;
                         margin: 0 auto;
+                        @include screen('xs_mobile') {
+                            max-width: 280px;
+                        }
                     }
                 }
 

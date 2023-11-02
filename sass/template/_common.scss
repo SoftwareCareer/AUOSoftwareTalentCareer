@@ -69,7 +69,7 @@ p {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: url(../images/top.png) no-repeat center center rgba($primaryColor, 0.4);
+    background: url(../images/top.png) no-repeat center center rgba($primaryColor, 0.5);
     text-align: center;
     color: #fff;
     line-height: 50px;
@@ -84,6 +84,6 @@ p {
 
     &:hover,
     &:focus {
-        background: url(../images/top.png) no-repeat center center rgba($primaryColor, 0.8);
+        background: url(../images/top.png) no-repeat center center rgba($primaryColor, 0.9);
     }
 }

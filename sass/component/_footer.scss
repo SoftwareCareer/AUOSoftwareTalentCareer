@@ -9,8 +9,7 @@
     .container {
         flex-wrap: nowrap;
 
-
-        &>* {
+        & > * {
             align-items: flex-start;
         }
 
@@ -21,7 +20,6 @@
             align-items: flex-start;
             margin-top: 0;
             align-self: flex-start;
-            outline: 1px solid red;
 
             @include screen('tablet') {
                 flex-basis: 80px;
@@ -166,9 +164,7 @@
             padding: 0 1em;
             align-self: flex-start;
             font-size: 0.875rem;
-            margin: 0 0 0 auto;
-
-
+            margin: 0 1em 0 auto;
 
             p {
                 font-size: 0.913rem;
