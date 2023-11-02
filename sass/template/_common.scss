@@ -46,7 +46,6 @@ body {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    outline: 1px solid red;
 
     @include screen('mobile') {
         padding: 0 1em;
@@ -60,6 +59,9 @@ a {
 
 h3 {
     line-height: 1.5em;
+}
+p {
+    line-height: 1.65em;
 }
 
 // scrollTop

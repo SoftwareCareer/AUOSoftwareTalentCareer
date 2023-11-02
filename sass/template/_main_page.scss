@@ -1,6 +1,18 @@
+.cover {
+    position: absolute;
+    width: 1200px;
+    height: 800px;
+    top: -1000px;
+    img {
+        width: 100%;
+    }
+}
 section {
     padding: 2em 0 2.5em;
     min-height: 500px;
+    @include screen('xs_mobile') {
+        min-height: 300px;
+    }
     .container {
         img {
             max-width: 100%;
@@ -21,7 +33,6 @@ section {
         text-align: center;
         width: 100%;
         max-width: 920px;
-        outline: 1px solid red;
 
         @include screen('tablet') {
             font-size: 3em;
@@ -42,7 +53,6 @@ section {
         text-align: center;
         width: 100%;
         max-width: 920px;
-        outline: 1px solid red;
 
         @include screen('tablet') {
             font-size: 2em;
@@ -84,18 +94,114 @@ section {
 
     &.jobs {
         text-align: center;
-
+        padding-top: 4em;
+        @include screen('tablet') {
+            padding-top: 2em;
+        }
         img {
             width: 100%;
         }
     }
+    &.auo_intro {
+        background-color: $color-yellow;
+        position: relative;
+        padding: 4em 0;
+        @include screen('mobile') {
+            padding-top: 260px;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            width: 40%;
+            max-width: 850px;
+            min-width: 650px;
+            aspect-ratio: 1/1;
+
+            right: -5%;
+            top: 0;
+            background: url(../images/auo-about-image-1.png) no-repeat center top;
+            background-size: contain;
+            @include screen('tablet') {
+                min-width: 300px;
+                right: -15%;
+            }
+            @include screen('xs_mobile') {
+                width: 360px;
+                min-width: 360px;
+                right: -30%;
+                top: 0px;
+                background: url(../images/auo-about-image-1.png) no-repeat center -50px;
+                background-size: contain;
+            }
+        }
+        .content {
+            display: block;
+            h3.title {
+                font-size: 2.25em;
+                text-align: left;
+                margin: 0 1em 1em 1rem;
+                display: block;
+                max-width: 100%;
+                br {
+                    display: none;
+                    @include screen('mobile') {
+                        display: block;
+                    }
+                }
+                @include screen('mobile') {
+                    font-size: 1.75em;
+                }
+                @include screen('xs_mobile') {
+                    font-size: 1.5em;
+                }
+            }
+            p {
+                font-size: 1.25em;
+                color: $primaryColor;
+                line-height: 1.5em;
+                text-align: left;
+                margin: 0 auto 1em 1rem;
+                max-width: 500px;
+                display: block;
+                em {
+                    font-weight: bold;
+                    font-style: normal;
+                }
+                @include screen('mobile') {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+    &.auo_pic {
+        padding-bottom: 100px;
+        position: relative;
+        h3.title {
+            font-size: 2.25em;
+            margin: 0 auto 1em;
+            display: block;
+            max-width: 960px;
+
+            @include screen('mobile') {
+                font-size: 1.75em;
+            }
+            @include screen('xs_mobile') {
+                font-size: 1.5em;
+            }
+        }
+    }
     &.location {
+        padding-top: 4em;
+        @include screen('tablet') {
+            padding-top: 2em;
+        }
         h3.title {
             margin-bottom: 0;
         }
         img {
             max-width: 960px;
             margin: 0 auto;
+            width: 100%;
         }
         p {
             text-align: center;
@@ -155,11 +261,118 @@ section {
             }
         }
     }
-    &.what {
-        background: url(../images/feature_bg.png) no-repeat left bottom #f5f5f5;
+    &.condition {
+        background: url(../images/condition_bg.png) no-repeat right bottom #f5f5f5;
         background-size: contain;
         @include screen('mobile') {
             padding-bottom: 280px;
+        }
+        h3.title {
+            max-width: 100%;
+            text-align: left;
+            max-width: 720px;
+            margin: 0 auto 0.5em 0.5em;
+            @include screen('mobile') {
+                text-align: center;
+            }
+        }
+        .content {
+            flex-basis: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            max-width: 720px;
+            margin: 0 auto 0 0;
+            @include screen('tablet') {
+                margin: 0 0 0 auto;
+            }
+            .item {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 50%;
+                padding: 0 1em;
+                text-align: left;
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                }
+                h4 {
+                    background-color: $primaryColor;
+                    color: #fff;
+                    width: 100%;
+                    margin: 0;
+                    line-height: 1.5em;
+                    font-size: 1.5em;
+                    padding: 0.25em 0;
+                    border-radius: 2em;
+                    margin: 0 auto 1em;
+                    text-align: center;
+                    @include screen('mobile') {
+                        margin: 0 auto 1.5em;
+                    }
+                    @include screen('xs_mobile') {
+                        width: 90%;
+                        padding: 0.25em 0;
+                    }
+                }
+                p {
+                    font-size: 1.5em;
+                    line-height: 1.5em;
+                    color: #777;
+                    text-align: center;
+                    @include screen('xs_mobile') {
+                        font-size: 1.25em;
+                        padding: 0 2em 1em;
+                    }
+                    span {
+                        color: $primaryColor;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        hr {
+            border: none;
+            flex-basis: 100%;
+        }
+        .btn_grp {
+            flex-basis: 100%;
+            display: block;
+            flex-flow: row wrap;
+            max-width: 720px;
+            margin: 2em auto 4em 0;
+            padding-left: 1em;
+            @include screen('mobile') {
+                margin: 1em auto 1em;
+            }
+            a {
+                border-radius: 2em;
+                padding: 1em;
+                font-size: 2em;
+                display: block;
+                text-align: center;
+                color: $primaryColor;
+                background-color: $color-yellow;
+                width: 400px;
+                @include screen('mobile') {
+                    font-size: 1.5em;
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    &.what {
+        background: url(../images/feature_bg.png) no-repeat left bottom #f5f5f5;
+        background-size: contain;
+        padding-top: 4em;
+        @include screen('tablet') {
+            padding-top: 2em;
+        }
+        @include screen('tablet') {
+            background-size: 75%;
+        }
+        @include screen('mobile') {
+            padding-bottom: 280px;
+            background-size: contain;
         }
         h3.title {
             max-width: 100%;
@@ -209,8 +422,9 @@ section {
         background: url(../images/what_bg.png) no-repeat right bottom;
         background-size: contain;
         @include screen('mobile') {
-            padding-bottom: 280px;
+            background: none;
         }
+
         h3.title {
             max-width: 100%;
         }
@@ -335,7 +549,7 @@ section {
                     text-align: center;
                     aspect-ratio: 1/1;
                     border-radius: 50%;
-                    background-color: $color-purple;
+                    background-color: $color-blue;
                     position: relative;
                     @include screen('xs_mobile') {
                         max-width: 180px;
@@ -402,9 +616,9 @@ section {
     &.kv {
         position: relative;
         min-height: 600px;
-        padding-top: 100px;
+        padding-top: 80px;
         @include screen('notebook') {
-            padding-top: 100px;
+            padding-top: 80px;
         }
         @include screen('xs_mobile') {
             padding-top: 330px;
@@ -412,14 +626,18 @@ section {
         &:after {
             position: absolute;
             content: '';
-            width: 35%;
-            min-width: 700px;
+            width: 40%;
+            min-width: 580px;
             aspect-ratio: 1/1;
-            outline: 1px solid red;
+
             right: -2%;
             top: 0;
             background: url(../images/kv.png) no-repeat center top;
             background-size: contain;
+            @include screen('notebook') {
+                width: 30%;
+                min-width: 480px;
+            }
             @include screen('tablet') {
                 width: 25%;
                 min-width: 300px;
@@ -452,9 +670,9 @@ section {
         .content {
             flex-basis: 100%;
             display: block;
-            outline: 1px solid red;
+
             max-width: 960px;
-            padding: 2em 0;
+            padding: 1em 0 2em;
             @include screen('xs_mobile') {
                 padding: 0;
             }
@@ -466,11 +684,16 @@ section {
                     flex-grow: 0;
                     flex-shrink: 1;
                     flex-basis: 50%;
-                    padding: 1em;
+                    padding: 0.75em;
                     list-style: none;
                     @include screen('xs_mobile') {
                         flex-basis: 100%;
                         padding: 0.25em 0 1em;
+                    }
+                    &:last-child {
+                        a {
+                            background-color: $color-green;
+                        }
                     }
                     a {
                         display: block;
@@ -555,7 +778,7 @@ section {
                 h4 {
                     margin: 0 0 0.25em 0;
                     line-height: 1.5em;
-                    font-size: 1.5em;
+                    font-size: 2em;
                     position: relative;
                     padding-left: 0.75em;
 
@@ -583,8 +806,8 @@ section {
                     padding: 0;
 
                     @include screen('notebook') {
-                        flex-basis: 320px;
-                        max-width: 320px;
+                        flex-basis: 280px;
+                        max-width: 280px;
                     }
 
                     @include screen('tablet') {

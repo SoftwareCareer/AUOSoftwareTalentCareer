@@ -26,4 +26,44 @@ $(function () {
     //     sidebar.stop().toggleClass('menu-opened');
     //     $(this).blur();
     // });
+    $('#btn_jobs')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.jobs').offset().top - 60 }, 800, 'easeOutExpo');
+            e.preventDefault();
+        });
+    $('#btn_what')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.what').offset().top - 60 }, 800, 'easeOutExpo');
+            e.preventDefault();
+        });
+    $('#btn_auo_intro')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.auo_intro').offset().top - 60 }, 800, 'easeOutExpo');
+            e.preventDefault();
+        });
+    $('#btn_grc')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.grc').offset().top - 60 }, 800, 'easeOutExpo');
+            e.preventDefault();
+        });
+    $('#btn_location')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.location').offset().top - 60 }, 800, 'easeOutExpo');
+            e.preventDefault();
+        });
 });
