@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('font/Mabry-Black-Pro.ttf') format('truetype');
+    src: url('font/Mabry-Bold-Pro.ttf') format('truetype');
+    src: url('font/Mabry-Italic-Pro.ttf') format('truetype');
+    src: url('font/Mabry-Medium-Pro.ttf') format('truetype');
+    src: url('font/Mabry-Regular-Pro.ttf') format('truetype');
+    src: url('font/Mabry-Black-Pro.ttf') format('truetype');
+    src: url('font/Mabry-Black-Pro.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;400&display=swap');
+
+body {
+    line-height: 1.5em;
+    font-family: 'Mabry Pro', Verdana, 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans JP', 'Microsoft JhengHei',
+        'sans-serif';
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    padding-top: 120px;
+
+    @include screen('tablet') {
+        padding-top: 60px;
+    }
+
+    @include screen('mobile') {
+        padding-top: 60px;
+    }
+}
+
+.container {
+    max-width: $container-max;
+    margin: 0 auto;
+    padding: 0 2em;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    outline: 1px solid red;
+
+    @include screen('mobile') {
+        padding: 0 1em;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $aColor;
+}
+
+h3 {
+    line-height: 1.5em;
+}
+
+// scrollTop
+.scrollToTop {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: url(../images/top.png) no-repeat center center rgba($primaryColor, 0.4);
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+    text-decoration: none;
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5em;
+    transition: 0.3s ease-out;
+    display: none;
+    z-index: 99999999;
+    text-indent: -999999px;
+
+    &:hover,
+    &:focus {
+        background: url(../images/top.png) no-repeat center center rgba($primaryColor, 0.8);
+    }
+}

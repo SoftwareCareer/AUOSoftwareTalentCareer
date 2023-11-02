@@ -1,0 +1,16 @@
+@charset "utf-8";
+// 共通
+@import '_variable'; //變數
+@import 'sass/_normalize'; //reset
+@import 'sass/_mixin'; //mixin
+
+//element
+@import 'element/_button';
+
+//components
+@import 'component/_header';
+@import 'component/_footer';
+
+//template
+@import 'template/_common';
+@import 'template/_main_page';

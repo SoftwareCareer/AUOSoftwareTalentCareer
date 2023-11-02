@@ -1,0 +1,437 @@
+section {
+    padding: 3em 0;
+    min-height: 500px;
+
+    img {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h2.title {
+        color: $primaryColor;
+        font-size: 2.5em;
+        font-weight: bold;
+        margin: 1rem auto 3rem;
+        line-height: 1.5em;
+        display: block;
+        text-align: center;
+        width: 100%;
+        max-width: 920px;
+        outline: 1px solid red;
+
+        @include screen('tablet') {
+            font-size: 3em;
+        }
+
+        @include screen('mobile') {
+            font-size: 2.5em;
+        }
+    }
+
+    h3.title {
+        color: $primaryColor;
+        font-size: 3em;
+        font-weight: bold;
+        margin: 1rem auto 2rem;
+        line-height: 1.5em;
+        display: block;
+        text-align: center;
+        width: 100%;
+        max-width: 920px;
+        outline: 1px solid red;
+
+        @include screen('tablet') {
+            font-size: 2em;
+        }
+    }
+
+    h4 {
+        font-size: 2em;
+        color: $primaryColor;
+    }
+
+    &.blue {
+        background-color: $primaryColor;
+
+        h2.title {
+            color: #FFF;
+        }
+    }
+
+    &.yellow {
+        background-color: $color-yellow;
+    }
+
+    &.purple {
+        background-color: $color-purple;
+    }
+
+    &.lightblue {
+        background-color: $color-blue;
+    }
+
+    &.green {
+        background-color: $color-green;
+    }
+
+    &.gray {
+        background-color: #f5f5f5;
+    }
+
+    &.jobs {
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &.software {
+        h3.title {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: .5em;
+        }
+
+        small {
+            display: block;
+            color: lighten($primaryColor, 10);
+            max-width: 600px;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 100%;
+            max-width: 720px;
+            font-size: .938em;
+            line-height: 1.45em;
+            margin: 0 auto .5em;
+
+            @include screen('mobile') {
+                max-width: 90%;
+            }
+        }
+
+        .content {
+            margin-top: 2em;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+
+            hr {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 100%;
+                width: 100%;
+            }
+
+            .item {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 50%;
+                text-align: left;
+                color: $primaryColor;
+                padding: 0em 2em;
+                display: block;
+
+                h4 {
+                    margin: 0 0 .25em 0;
+                    line-height: 1.5em;
+                    font-size: 1.5em;
+                    position: relative;
+                    padding-left: .75em;
+
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        width: 6px;
+                        height: 1em;
+                        background-color: $color-blue;
+                        top: .25em;
+                        left: 0;
+                        transform: skew(-25deg);
+                    }
+
+                    @include screen('xs_mobile') {
+                        font-size: 1.5em;
+                    }
+                }
+
+                &.pic {
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: 380px;
+                    max-width: 380px;
+                    padding: 0;
+
+                    @include screen('notebook') {
+                        flex-basis: 320px;
+                        max-width: 320px;
+                    }
+
+                    @include screen('tablet') {
+                        flex-basis: 100%;
+                        width: 100%;
+                        max-width: 100%;
+                        text-align: center;
+                        margin-bottom: 2em;
+                    }
+
+
+
+                    img {
+                        width: 100%;
+                        max-width: 380px;
+                        margin: 0 auto;
+                    }
+                }
+
+                &.job_list {
+                    display: flex;
+                    flex-flow: row wrap;
+
+                    @include screen('mobile') {
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 100%;
+                    }
+
+
+                    .item {
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 50%;
+                        padding: 0 2em 2em 1em;
+
+                        @include screen('mobile') {
+                            flex-basis: 100%;
+                            padding: 0 0em 2em 0em;
+                        }
+
+                        p {
+                            color: #555;
+                            margin: 0 0 1em;
+
+                            @include screen('mobile') {
+                                margin-left: 1.5em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.map {
+        background-color: #005087;
+
+        .container {
+
+
+            h3.title {
+                color: #FFF;
+                margin: 0 auto;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &.grc {
+        position: relative;
+        padding-top: 700px;
+        background-color: #2a3a55;
+
+        @include screen('desktop') {
+            padding-top: 850px;
+        }
+
+        @include screen('tablet') {
+            padding-top: 300px;
+        }
+
+        @include screen('mobile') {
+            padding-top: 300px;
+        }
+
+        @include screen('xs_mobile') {
+            padding-top: 200px;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            background: url(../images/grc.png) no-repeat center top;
+            background-size: contain;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        blockquote {
+            color: #FFF !important;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            line-height: 1.5em;
+            color: $primaryColor;
+            text-align: left;
+            flex-flow: row wrap;
+            width: 100%;
+
+            .set {
+                display: flex;
+                width: 100%;
+
+                @include screen('mobile') {
+                    flex-flow: row wrap;
+                    margin-bottom: 2em;
+                }
+
+                &:nth-of-type(odd) {
+
+                    .item {
+                        order: 2;
+
+                        @include screen('mobile') {
+                            order: 1;
+                        }
+
+                        &.word {
+                            order: 1;
+
+                            @include screen('mobile') {
+                                order: 2;
+                            }
+                        }
+                    }
+                }
+            }
+
+            h3.title {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 100%;
+                width: 100%;
+                min-width: 100%;
+                text-align: left;
+                margin: 0 0 1em 0;
+                outline: none;
+                font-size: 1.75em;
+
+                @include screen('mobile') {
+                    text-align: center;
+                }
+
+                span {
+                    display: inline-block;
+                    color: #FFF;
+                    background-color: $color-blue;
+                    padding: .25em 2em;
+                    text-align: center;
+                    margin: 0 auto 0 0;
+                    color: $primaryColor;
+
+                    @include screen('mobile') {
+                        font-size: 1.25rem;
+                        padding: 0em 4em;
+                    }
+
+                }
+            }
+
+            .item {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 50%;
+                min-height: 100px;
+                margin-bottom: 3em;
+                background-color: rgba(0, 0, 0, .35);
+
+                @include screen('mobile') {
+                    flex-basis: 100%;
+                    width: 90%;
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+
+                &.word {
+                    flex-basis: 50%;
+                    padding: 0 1em;
+                    background-color: rgba(0, 0, 0, .35);
+
+                    @include screen('mobile') {
+                        flex-basis: 100%;
+                        width: 90%;
+                        max-width: 600px;
+                        margin: 0 auto;
+                        padding: 1em;
+                        order: even;
+                    }
+
+
+                }
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            // 文本
+            blockquote {
+                font-size: 2em;
+                line-height: 1.75em;
+                margin: 3em 1em 0em 3em;
+                position: relative;
+                // font-weight: bold;
+                text-shadow: 0px 0px 15px rgba(0, 0, 0, .5);
+
+                @media screen and (max-width:1200px) {
+                    font-size: 1.65em;
+                    margin: 3em 1em 0em 3em;
+
+                }
+
+                @include screen('tablet') {
+                    font-size: 1.25em;
+                    margin: 4em 1em 2em 3em;
+                }
+
+                @include screen('mobile') {
+                    margin: 2.5em 1em 2em 3em;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    background: url(../images/before.png) no-repeat center center;
+                    background-size: contain;
+                    width: 75px;
+                    height: 75px;
+                    left: -75px;
+                    top: -75px;
+                    opacity: .65;
+
+                    @include screen('tablet') {
+                        width: 50px;
+                        height: 50px;
+                        left: -50px;
+                        top: -50px;
+                        opacity: .25;
+                    }
+                }
+            }
+
+            // common
+            br {
+                @include screen('mobile') {
+                    display: none;
+                }
+            }
+        }
+    }
+}

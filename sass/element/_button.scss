@@ -1,0 +1,60 @@
+.btn-grp {
+    margin: 1em 0;
+}
+button {
+    cursor: pointer;
+    min-width: 120px;
+    margin: 0 auto;
+    display: block;
+    height: 54px;
+    padding: 0 16px;
+    border-radius: 28px;
+    text-align: center;
+    outline: 0 !important;
+    transition: color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translateZ(0);
+    overflow: hidden;
+    border: none;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    position: relative;
+    z-index: 1;
+    &:after {
+        position: absolute;
+        content: '';
+        left: 50%;
+        bottom: -15px;
+        transform: scale(1);
+        border-radius: 50%;
+        width: 0.5em;
+        height: 0.5em;
+        background-color: $color-yellow;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        z-index: 1;
+        box-shadow: none;
+    }
+    &:hover,
+    &:focus {
+        &:after {
+            transform: scale(25);
+        }
+    }
+
+    .btn-title {
+        position: relative;
+        z-index: 2;
+    }
+    &.btn-primary {
+        background-color: $primaryColor;
+        color: #fff;
+        &:hover,
+        &:focus {
+            color: $primaryColor;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@mixin screen($size) {
+    $desktop: '(min-width: 1600px)';
+    $notebook: '(min-width: 1024px) and (max-width: 1599px)';
+    $tablet: '(max-width: 1023px)';
+    $mobile: '(max-width: 767px)';
+    $xs_mobile: '(max-width: 576px)';
+    @if $size == desktop {
+        @media only screen and #{$desktop} {
+            @content;
+        }
+    } @else if $size == notebook {
+        @media only screen and #{$notebook} {
+            @content;
+        }
+    } @else if $size == tablet {
+        @media only screen and #{$tablet} {
+            @content;
+        }
+    } @else if $size == mobile {
+        @media only screen and #{$mobile} {
+            @content;
+        }
+    } @else if $size == xs_mobile {
+        @media only screen and #{$xs_mobile} {
+            @content;
+        }
+    }
+}
