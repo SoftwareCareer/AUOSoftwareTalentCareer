@@ -24,7 +24,8 @@ body {
 
 .wrapper {
     padding-top: 120px;
-
+    overflow-x: hidden !important;
+    overflow-y: auto;
     @include screen('tablet') {
         padding-top: 60px;
     }

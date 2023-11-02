@@ -19,11 +19,11 @@ $(function () {
             e.preventDefault();
         });
 
-    var burger = $('.mobile_button').find('.btn');
-    sidebar = $('.sidebar');
+    // var burger = $('.mobile_button').find('.btn');
+    // sidebar = $('.sidebar');
 
-    burger.off().click(function (e) {
-        sidebar.stop().toggleClass('menu-opened');
-        $(this).blur();
-    });
+    // burger.off().click(function (e) {
+    //     sidebar.stop().toggleClass('menu-opened');
+    //     $(this).blur();
+    // });
 });

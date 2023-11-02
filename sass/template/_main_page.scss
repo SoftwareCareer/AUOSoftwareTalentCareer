@@ -1,7 +1,11 @@
 section {
-    padding: 3em 0;
+    padding: 2em 0 2.5em;
     min-height: 500px;
-
+    .container {
+        img {
+            max-width: 100%;
+        }
+    }
     img {
         max-width: 1200px;
         margin: 0 auto;
@@ -54,7 +58,7 @@ section {
         background-color: $primaryColor;
 
         h2.title {
-            color: #FFF;
+            color: #fff;
         }
     }
 
@@ -85,12 +89,428 @@ section {
             width: 100%;
         }
     }
+    &.location {
+        h3.title {
+            margin-bottom: 0;
+        }
+        img {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        p {
+            text-align: center;
+            display: block;
+            width: 90%;
+            margin: 0em auto;
+            color: #888;
+        }
+    }
+    &.condition {
+        background: url(../images/feature_bg.png) no-repeat left bottom #f5f5f5;
+        background-size: contain;
+        @include screen('mobile') {
+            padding-bottom: 280px;
+        }
+        h3.title {
+            max-width: 100%;
+        }
+        .content {
+            flex-basis: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            max-width: 720px;
+            margin: 0 auto;
+            @include screen('tablet') {
+                margin: 0 0 0 auto;
+            }
+            .item {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 50%;
+                padding: 0 1em;
+                text-align: left;
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                }
+                h4 {
+                    margin: 0;
+                    line-height: 1.5em;
+                    font-size: 2em;
+                    padding: 0.25em 0;
+                    border-radius: 2em;
+                    margin: 0 auto 0.5em;
+                    @include screen('mobile') {
+                        font-size: 1.5em;
+                    }
+                    @include screen('xs_mobile') {
+                        margin: 0 auto 0.25em;
+                        text-align: center;
+                    }
+                }
+                p {
+                    @include screen('xs_mobile') {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    &.what {
+        background: url(../images/feature_bg.png) no-repeat left bottom #f5f5f5;
+        background-size: contain;
+        @include screen('mobile') {
+            padding-bottom: 280px;
+        }
+        h3.title {
+            max-width: 100%;
+        }
+        .content {
+            flex-basis: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            max-width: 720px;
+            margin: 0 auto;
+            @include screen('tablet') {
+                margin: 0 0 0 auto;
+            }
+            .item {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 50%;
+                padding: 0 1em;
+                text-align: left;
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                }
+                h4 {
+                    margin: 0;
+                    line-height: 1.5em;
+                    font-size: 2em;
+                    padding: 0.25em 0;
+                    border-radius: 2em;
+                    margin: 0 auto 0.5em;
+                    @include screen('mobile') {
+                        font-size: 1.5em;
+                    }
+                    @include screen('xs_mobile') {
+                        margin: 0 auto 0.25em;
+                        text-align: center;
+                    }
+                }
+                p {
+                    @include screen('xs_mobile') {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    &.feature {
+        background: url(../images/what_bg.png) no-repeat right bottom;
+        background-size: contain;
+        @include screen('mobile') {
+            padding-bottom: 280px;
+        }
+        h3.title {
+            max-width: 100%;
+        }
+        .content {
+            flex-basis: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            max-width: 500px;
+            margin: 0 auto;
+
+            .item {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 100%;
+                padding: 0 1em;
+                text-align: left;
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                }
+                h4 {
+                    margin: 0;
+                    line-height: 1.5em;
+                    font-size: 2em;
+                    padding: 0.25em 0;
+                    border-radius: 2em;
+                    margin: 0 auto 0.25em;
+                    text-align: center;
+                    @include screen('mobile') {
+                        font-size: 1.5em;
+                    }
+                    @include screen('xs_mobile') {
+                        margin: 0 auto 0.25em;
+                    }
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &.topic {
+        .content {
+            flex-basis: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            .item {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 33.3333%;
+                padding: 0 1em;
+                @include screen('mobile') {
+                    flex-basis: 100%;
+                }
+                h4 {
+                    background-color: $primaryColor;
+                    color: #fff;
+                    width: 100%;
+                    margin: 0;
+                    line-height: 1.5em;
+                    font-size: 1.5em;
+                    padding: 0.25em 0;
+                    border-radius: 2em;
+                    margin: 0 auto 1em;
+                    @include screen('mobile') {
+                        margin: 0 auto 1.5em;
+                    }
+                    @include screen('xs_mobile') {
+                        width: 90%;
+                        padding: 0.25em 0;
+                    }
+                }
+                h5 {
+                    font-size: 1.75em;
+                    margin: 0 auto 0.5em;
+                    color: $primaryColor;
+                    line-height: 1.5em;
+                    @include screen('tablet') {
+                        font-size: 1.5em;
+                    }
+                    @include screen('xs_mobile') {
+                        margin: 0 auto 0.25em;
+                    }
+                }
+                p {
+                    color: #555;
+                    margin: 0 0 2em;
+                    font-size: 1.25em;
+                    @include screen('tablet') {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+        p {
+            text-align: center;
+            display: block;
+            width: 90%;
+            margin: 2em auto;
+            color: #888;
+        }
+    }
+    &.welfare {
+        .content {
+            flex-basis: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            .item {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 25%;
+                padding: 0 1em;
+                @include screen('tablet') {
+                    flex-basis: 50%;
+                }
+                @include screen('mobile') {
+                    flex-basis: 100%;
+                }
+                .pic {
+                    width: 60%;
+                    margin: 0 auto 1em;
+                    text-align: center;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    background-color: $color-purple;
+                    position: relative;
+                    @include screen('xs_mobile') {
+                        max-width: 180px;
+                    }
+                    img {
+                        position: absolute;
+                        width: 75%;
+                        height: 75%;
+                        top: 12.5%;
+                        left: 12.5%;
+                        object-fit: contain;
+                    }
+                }
+                h4 {
+                    background-color: $primaryColor;
+                    color: #fff;
+                    width: 100%;
+                    margin: 0;
+                    line-height: 1.5em;
+                    font-size: 1.5em;
+                    padding: 0.25em 0;
+                    border-radius: 2em;
+                    margin: 0 auto 1em;
+                    @include screen('mobile') {
+                        margin: 0 auto 1.5em;
+                    }
+                    @include screen('xs_mobile') {
+                        width: 90%;
+                        padding: 0.25em 0;
+                    }
+                }
+                h5 {
+                    font-size: 1.75em;
+                    margin: 0 auto 0.5em;
+                    color: $primaryColor;
+                    line-height: 1.5em;
+                    @include screen('tablet') {
+                        font-size: 1.5em;
+                    }
+                    @include screen('xs_mobile') {
+                        margin: 0 auto 0.25em;
+                    }
+                }
+                p {
+                    color: #555;
+                    margin: 0 0 2em;
+                    font-size: 1.125em;
+                    line-height: 1.5em;
+                    width: 100%;
+                    @include screen('tablet') {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+        p {
+            text-align: center;
+            display: block;
+            width: 90%;
+            margin: 2em auto;
+            color: #888;
+        }
+    }
+    &.kv {
+        position: relative;
+        min-height: 600px;
+        padding-top: 100px;
+        @include screen('notebook') {
+            padding-top: 100px;
+        }
+        @include screen('xs_mobile') {
+            padding-top: 330px;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            width: 35%;
+            min-width: 700px;
+            aspect-ratio: 1/1;
+            outline: 1px solid red;
+            right: -2%;
+            top: 0;
+            background: url(../images/kv.png) no-repeat center top;
+            background-size: contain;
+            @include screen('tablet') {
+                width: 25%;
+                min-width: 300px;
+            }
+            @include screen('xs_mobile') {
+                width: 360px;
+                min-width: 360px;
+            }
+        }
+        h2.title {
+            text-align: left;
+            margin: 0;
+            font-weight: normal;
+            font-size: 4em;
+            line-height: 1.35em;
+            @include screen('notebook') {
+                font-size: 3.5em;
+            }
+            @include screen('xs_mobile') {
+                font-size: 2.5em;
+                text-align: center;
+                margin: 0 0 0.25em;
+            }
+            br {
+                @include screen('xs_mobile') {
+                    display: none;
+                }
+            }
+        }
+        .content {
+            flex-basis: 100%;
+            display: block;
+            outline: 1px solid red;
+            max-width: 960px;
+            padding: 2em 0;
+            @include screen('xs_mobile') {
+                padding: 0;
+            }
+            ul {
+                display: flex;
+                flex-flow: row wrap;
+                padding: 0;
+                li {
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: 50%;
+                    padding: 1em;
+                    list-style: none;
+                    @include screen('xs_mobile') {
+                        flex-basis: 100%;
+                        padding: 0.25em 0 1em;
+                    }
+                    a {
+                        display: block;
+                        background-color: $color-yellow;
+                        color: $primaryColor;
+                        text-align: center;
+                        padding: 1em 0;
+                        border-radius: 0.5em;
+
+                        @include screen('xs_mobile') {
+                            padding: 0.5em 0 0.25em;
+                        }
+                        span {
+                            font-size: 1.5em;
+                            font-weight: 800;
+                            display: block;
+                            margin-bottom: 0.5em;
+                            @include screen('xs_mobile') {
+                                font-size: 1.25em;
+                                margin-bottom: 0.25em;
+                            }
+                        }
+                        small {
+                            display: block;
+                            font-size: 1.25em;
+                            @include screen('xs_mobile') {
+                                font-size: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     &.software {
         h3.title {
             width: 100%;
             max-width: 100%;
-            margin-bottom: .5em;
+            margin-bottom: 0.5em;
         }
 
         small {
@@ -101,9 +521,9 @@ section {
             flex-shrink: 1;
             flex-basis: 100%;
             max-width: 720px;
-            font-size: .938em;
+            font-size: 0.938em;
             line-height: 1.45em;
-            margin: 0 auto .5em;
+            margin: 0 auto 0.5em;
 
             @include screen('mobile') {
                 max-width: 90%;
@@ -133,19 +553,19 @@ section {
                 display: block;
 
                 h4 {
-                    margin: 0 0 .25em 0;
+                    margin: 0 0 0.25em 0;
                     line-height: 1.5em;
                     font-size: 1.5em;
                     position: relative;
-                    padding-left: .75em;
+                    padding-left: 0.75em;
 
                     &:before {
                         position: absolute;
-                        content: "";
+                        content: '';
                         width: 6px;
                         height: 1em;
                         background-color: $color-blue;
-                        top: .25em;
+                        top: 0.25em;
                         left: 0;
                         transform: skew(-25deg);
                     }
@@ -175,8 +595,6 @@ section {
                         margin-bottom: 2em;
                     }
 
-
-
                     img {
                         width: 100%;
                         max-width: 380px;
@@ -193,7 +611,6 @@ section {
                         flex-shrink: 1;
                         flex-basis: 100%;
                     }
-
 
                     .item {
                         flex-grow: 0;
@@ -224,10 +641,8 @@ section {
         background-color: #005087;
 
         .container {
-
-
             h3.title {
-                color: #FFF;
+                color: #fff;
                 margin: 0 auto;
             }
 
@@ -260,7 +675,7 @@ section {
 
         &:before {
             position: absolute;
-            content: "";
+            content: '';
             background: url(../images/grc.png) no-repeat center top;
             background-size: contain;
             width: 100%;
@@ -270,7 +685,7 @@ section {
         }
 
         blockquote {
-            color: #FFF !important;
+            color: #fff !important;
         }
 
         .content {
@@ -292,7 +707,6 @@ section {
                 }
 
                 &:nth-of-type(odd) {
-
                     .item {
                         order: 2;
 
@@ -328,9 +742,9 @@ section {
 
                 span {
                     display: inline-block;
-                    color: #FFF;
+                    color: #fff;
                     background-color: $color-blue;
-                    padding: .25em 2em;
+                    padding: 0.25em 2em;
                     text-align: center;
                     margin: 0 auto 0 0;
                     color: $primaryColor;
@@ -339,7 +753,6 @@ section {
                         font-size: 1.25rem;
                         padding: 0em 4em;
                     }
-
                 }
             }
 
@@ -349,7 +762,7 @@ section {
                 flex-basis: 50%;
                 min-height: 100px;
                 margin-bottom: 3em;
-                background-color: rgba(0, 0, 0, .35);
+                background-color: rgba(0, 0, 0, 0.35);
 
                 @include screen('mobile') {
                     flex-basis: 100%;
@@ -361,7 +774,7 @@ section {
                 &.word {
                     flex-basis: 50%;
                     padding: 0 1em;
-                    background-color: rgba(0, 0, 0, .35);
+                    background-color: rgba(0, 0, 0, 0.35);
 
                     @include screen('mobile') {
                         flex-basis: 100%;
@@ -371,8 +784,6 @@ section {
                         padding: 1em;
                         order: even;
                     }
-
-
                 }
 
                 img {
@@ -388,12 +799,11 @@ section {
                 margin: 3em 1em 0em 3em;
                 position: relative;
                 // font-weight: bold;
-                text-shadow: 0px 0px 15px rgba(0, 0, 0, .5);
+                text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 
-                @media screen and (max-width:1200px) {
+                @media screen and (max-width: 1200px) {
                     font-size: 1.65em;
                     margin: 3em 1em 0em 3em;
-
                 }
 
                 @include screen('tablet') {
@@ -407,21 +817,21 @@ section {
 
                 &:before {
                     position: absolute;
-                    content: "";
+                    content: '';
                     background: url(../images/before.png) no-repeat center center;
                     background-size: contain;
                     width: 75px;
                     height: 75px;
                     left: -75px;
                     top: -75px;
-                    opacity: .65;
+                    opacity: 0.65;
 
                     @include screen('tablet') {
                         width: 50px;
                         height: 50px;
                         left: -50px;
                         top: -50px;
-                        opacity: .25;
+                        opacity: 0.25;
                     }
                 }
             }
